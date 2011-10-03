@@ -36,7 +36,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1262189218" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1262189218" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.242719627" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.546745647" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -64,7 +64,13 @@
 		</cconfiguration>
 		<cconfiguration id="com.qnx.qcc.configuration.staticLib.release.1570411085">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.configuration.staticLib.release.1570411085" moduleId="org.eclipse.cdt.core.settings" name="Device-Release">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/box2d"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/box2d/Device-Release"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="box2d"/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
 					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -75,7 +81,7 @@
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.release.1570411085." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.release.714830853" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
 							<option id="com.qnx.qcc.option.cpu.151850842" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
-							<option id="com.qnx.qcc.option.runtime.159006348" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.runtime.159006348" name="Runtime:" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.6392697" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
 							<builder buildPath="${workspace_loc:/box2d/Device-Release}" id="com.qnx.nto.1825618731" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="com.qnx.nto"/>
 							<tool id="com.qnx.qcc.tool.compiler.191930414" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
@@ -89,9 +95,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1041788454" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList">
-									<listOptionValue builtIn="false" value="-Y_gcc_ntoarmv7le_gpp"/>
-								</option>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1041788454" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.491501254" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.2075840612" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -109,7 +113,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Box2D"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -117,7 +121,13 @@
 		</cconfiguration>
 		<cconfiguration id="com.qnx.qcc.configuration.staticLib.profile.730800174">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.configuration.staticLib.profile.730800174" moduleId="org.eclipse.cdt.core.settings" name="Device-Profile">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/box2d"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/box2d/Device-Profile"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="box2d"/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
 					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -128,7 +138,7 @@
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.profile.730800174." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.profile.730391239" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
 							<option id="com.qnx.qcc.option.cpu.1073722662" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
-							<option id="com.qnx.qcc.option.runtime.1845394599" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.runtime.1845394599" name="Runtime:" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.611772203" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
 							<builder buildPath="${workspace_loc:/box2d/Device-Profile}" id="com.qnx.nto.208309357" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="com.qnx.nto"/>
 							<tool id="com.qnx.qcc.tool.compiler.964711081" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
@@ -143,9 +153,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1619513121" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList">
-									<listOptionValue builtIn="false" value="-Y_gcc_ntoarmv7le_gpp"/>
-								</option>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1619513121" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1236019198" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.368656697" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -166,7 +174,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Box2D"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -174,7 +182,13 @@
 		</cconfiguration>
 		<cconfiguration id="com.qnx.qcc.configuration.staticLib.coverage.1418712830">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.configuration.staticLib.coverage.1418712830" moduleId="org.eclipse.cdt.core.settings" name="Device-Coverage">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/box2d"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/box2d/Device-Coverage"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="box2d"/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
 					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -185,7 +199,7 @@
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.coverage.1418712830." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.coverage.91199142" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
 							<option id="com.qnx.qcc.option.cpu.1203872202" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
-							<option id="com.qnx.qcc.option.runtime.1398236295" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.runtime.1398236295" name="Runtime:" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.129067540" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
 							<builder buildPath="${workspace_loc:/box2d/Device-Coverage}" id="com.qnx.nto.2057711496" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="com.qnx.nto"/>
 							<tool id="com.qnx.qcc.tool.compiler.1793588446" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
@@ -200,9 +214,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.934660212" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList">
-									<listOptionValue builtIn="false" value="-Y_gcc_ntoarmv7le_gpp"/>
-								</option>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.934660212" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1365138813" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.1089714556" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -223,7 +235,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Box2D"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -231,7 +243,13 @@
 		</cconfiguration>
 		<cconfiguration id="com.qnx.qcc.configuration.staticLib.debug.1053656939">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.configuration.staticLib.debug.1053656939" moduleId="org.eclipse.cdt.core.settings" name="Simulator">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/box2d"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/box2d/Simulator"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="box2d"/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
 					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -241,7 +259,7 @@
 				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="" id="com.qnx.qcc.configuration.staticLib.debug.1053656939" name="Simulator" parent="com.qnx.qcc.configuration.staticLib.debug">
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.debug.1053656939." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.debug.1184398587" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
-							<option id="com.qnx.qcc.option.runtime.1939652226" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.runtime.1939652226" name="Runtime:" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.1823546056" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
 							<builder buildPath="${workspace_loc:/box2d/Simulator}" id="com.qnx.nto.1924361823" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="com.qnx.nto"/>
 							<tool id="com.qnx.qcc.tool.compiler.616662524" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
@@ -255,9 +273,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.494816967" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList">
-									<listOptionValue builtIn="false" value="-Y_gcc_ntox86_gpp"/>
-								</option>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.494816967" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.847354580" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.1079128231" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -277,7 +293,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Box2D"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -285,7 +301,13 @@
 		</cconfiguration>
 		<cconfiguration id="com.qnx.qcc.configuration.staticLib.profile.1123518083">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.configuration.staticLib.profile.1123518083" moduleId="org.eclipse.cdt.core.settings" name="Simulator-Profile">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/box2d"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/box2d/Simulator-Profile"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="box2d"/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
 					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -295,7 +317,7 @@
 				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=com.qnx.buildType.profile,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="Build for Profiling" id="com.qnx.qcc.configuration.staticLib.profile.1123518083" name="Simulator-Profile" parent="com.qnx.qcc.configuration.staticLib.profile">
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.profile.1123518083." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.profile.1535310055" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
-							<option id="com.qnx.qcc.option.runtime.559387716" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.runtime.559387716" name="Runtime:" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.1499542636" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
 							<builder buildPath="${workspace_loc:/box2d/Simulator-Profile}" id="com.qnx.nto.1937810358" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="com.qnx.nto"/>
 							<tool id="com.qnx.qcc.tool.compiler.1445823766" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
@@ -310,9 +332,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1231866896" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList">
-									<listOptionValue builtIn="false" value="-Y_gcc_ntox86_gpp"/>
-								</option>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1231866896" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1809437339" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.177844402" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -333,7 +353,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Box2D"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -341,7 +361,13 @@
 		</cconfiguration>
 		<cconfiguration id="com.qnx.qcc.configuration.staticLib.coverage.1088278290">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.qnx.qcc.configuration.staticLib.coverage.1088278290" moduleId="org.eclipse.cdt.core.settings" name="Simulator-Coverage">
-				<externalSettings/>
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/box2d"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/box2d/Simulator-Coverage"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="box2d"/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
 					<extension id="com.qnx.tools.ide.qde.core.QDEBynaryParser" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -351,7 +377,7 @@
 				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=com.qnx.buildType.coverage,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="Build with Code Coverage" id="com.qnx.qcc.configuration.staticLib.coverage.1088278290" name="Simulator-Coverage" parent="com.qnx.qcc.configuration.staticLib.coverage">
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.coverage.1088278290." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.coverage.1770149974" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
-							<option id="com.qnx.qcc.option.runtime.1523923411" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
+							<option id="com.qnx.qcc.option.runtime.1523923411" name="Runtime:" superClass="com.qnx.qcc.option.runtime" value="com.qnx.qcc.option.gen.runtime.c++._gpp" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.1378961849" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
 							<builder buildPath="${workspace_loc:/box2d/Simulator-Coverage}" id="com.qnx.nto.336243661" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="com.qnx.nto"/>
 							<tool id="com.qnx.qcc.tool.compiler.1462796109" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
@@ -366,9 +392,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.2076363605" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList">
-									<listOptionValue builtIn="false" value="-Y_gcc_ntox86_gpp"/>
-								</option>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.2076363605" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1613997988" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.797529982" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -389,7 +413,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Box2D"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
