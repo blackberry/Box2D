@@ -20,6 +20,10 @@
 #include <cstdio>
 using namespace std;
 
+#ifdef __QNX__
+GLESDebugDraw Test::m_debugDraw;
+#endif
+
 void DestructionListener::SayGoodbye(b2Joint* joint)
 {
 	if (test->m_mouseJoint == joint)

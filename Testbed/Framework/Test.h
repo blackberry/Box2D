@@ -20,7 +20,11 @@
 #define TEST_H
 
 #include <Box2D/Box2D.h>
+#ifdef __QNX__
+#include "GLES-Render.h"
+#else
 #include "Render.h"
+#endif
 
 #include <cstdlib>
 
@@ -162,6 +166,10 @@ public:
 		B2_NOT_USED(impulse);
 	}
 
+#ifdef __QNX__
+	static GLESDebugDraw m_debugDraw;
+#endif
+
 protected:
 	friend class DestructionListener;
 	friend class BoundaryListener;
@@ -172,7 +180,9 @@ protected:
 	ContactPoint m_points[k_maxContactPoints];
 	int32 m_pointCount;
 	DestructionListener m_destructionListener;
+#ifndef __QNX__
 	DebugDraw m_debugDraw;
+#endif
 	int32 m_textLine;
 	b2World* m_world;
 	b2Body* m_bomb;
@@ -181,7 +191,7 @@ protected:
 	bool m_bombSpawning;
 	b2Vec2 m_mouseWorld;
 	int32 m_stepCount;
-
+	
 	b2Profile m_maxProfile;
 	b2Profile m_totalProfile;
 };
