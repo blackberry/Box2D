@@ -21,6 +21,7 @@
 
 #ifdef __APPLE__
 	#include <GLUT/glut.h>
+#elif __QNX__
 #else
 	#include "freeglut/freeglut.h"
 #endif

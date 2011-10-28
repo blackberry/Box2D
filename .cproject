@@ -95,7 +95,10 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1041788454" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1041788454" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
+								<option id="com.qnx.qcc.option.compiler.ccoptions.1015591939" superClass="com.qnx.qcc.option.compiler.ccoptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-fPIC"/>
+								</option>
 								<inputType id="com.qnx.qcc.inputType.compiler.491501254" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.2075840612" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -153,7 +156,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1619513121" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1619513121" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1236019198" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.368656697" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -214,7 +217,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.934660212" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.934660212" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1365138813" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.1089714556" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -273,7 +276,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.494816967" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.494816967" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.847354580" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.1079128231" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -332,7 +335,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.1231866896" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.1231866896" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1809437339" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.177844402" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -392,7 +395,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/freetype2"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 								</option>
-								<option id="com.qnx.qcc.option.compiler.qccoptions.2076363605" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions" valueType="stringList"/>
+								<option id="com.qnx.qcc.option.compiler.qccoptions.2076363605" name="QCC Options" superClass="com.qnx.qcc.option.compiler.qccoptions"/>
 								<inputType id="com.qnx.qcc.inputType.compiler.1613997988" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool id="com.qnx.qcc.tool.assembler.797529982" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
@@ -447,4 +450,5 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

@@ -2,7 +2,7 @@ The Build folder contains custom made project files for Visual Studio 2010 and X
 
 To build for the QNX platform on Windows, run cmd.exe and execute the following commands:
 > cd [bbndk]				where [bbndk] is where the QNX NDK was installed (i.e. C:\bbndk)
-> NativeSDK-env.bat
+> bbndk-env.bat
 > cd [box2d]/qnx			where [box2d] is the directory where Box2D was extracted to
 > make
 Following this, the relevant binaries should reside in the following subdirectories:
