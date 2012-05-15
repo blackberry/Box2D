@@ -1,4 +1,4 @@
-# Box2D
+# Box2D v2.1
 
 The _**Box2D**_ repository holds the sources for the Box2D, a 2D rigid body simulation physics library for games, ported to run with the Native SDK for BlackBerry © Tablet OS.
 
