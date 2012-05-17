@@ -1,17 +1,17 @@
 The Build folder contains custom made project files for Visual Studio 2010 and XCode4.
 
-To build for the QNX platform on Windows, run cmd.exe and execute the following commands:
+To build for BlackBerry (QNX-based) platforms, open the command-line and execute the following commands:
 > cd [bbndk]				where [bbndk] is where the QNX NDK was installed (i.e. C:\bbndk)
-> bbndk-env.bat
+> bbndk-env.bat             (on Windows or bbndk-env.sh on MacOSX or Linux)
 > cd [box2d]/qnx			where [box2d] is the directory where Box2D was extracted to
 > make
 Following this, the relevant binaries should reside in the following subdirectories:
     libBox2D: 
-        [box2d]/qnx/arm/a.le.v7      (ARM release)
-        [box2d]/qnx/arm/a.le.v7.g    (ARM debug)
-        [box2d]/qnx/x86/a            (x86 simulator release)
-        [box2d]/qnx/x86/a.g          (x86 simulator debug)
-
+        [box2d]/qnx/Box2D/arm/a.le.v7      (ARM release)
+        [box2d]/qnx/Box2D/arm/a.le.v7.g    (ARM debug)
+        [box2d]/qnx/Box2D/x86/a            (x86 simulator release)
+        [box2d]/qnx/Box2D/x86/a.g          (x86 simulator debug)
+s
 For other platforms you need to run premake in this directory. You can get premake here:
 http://industriousone.com/premake
 
