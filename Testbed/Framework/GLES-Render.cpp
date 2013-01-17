@@ -52,7 +52,6 @@ void GLESDebugDraw::DrawSolidPolygon(const b2Vec2* old_vertices, int vertexCount
 
 void GLESDebugDraw::DrawCircle(const b2Vec2& center, float32 radius, const b2Color& color)
 {
-		
 	const float32 k_segments = 16.0f;
 	int vertexCount=16;
 	const float32 k_increment = 2.0f * b2_pi / k_segments;
@@ -160,9 +159,7 @@ void GLESDebugDraw::DrawString(int x, int y, const char *string, ...)
 		glPushMatrix();
 		glLoadIdentity();
 
-		glColor4f(0.9f, 0.6f, 0.6f, 1.0f);
-
-		bbutil_render_text(_font, buffer, x, y);
+		bbutil_render_text(_font, buffer, x, y, 0.9f, 0.6f, 0.6f, 1.0f);
 
 		glPopMatrix();
 		glMatrixMode(GL_PROJECTION);

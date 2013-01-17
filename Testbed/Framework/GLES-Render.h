@@ -39,13 +39,13 @@ public:
     virtual void DrawAABB(b2AABB* aabb, const b2Color& color);
 
 #ifdef __QNX__
-    void 		 SetFont(const font_t *font) { _font = font; }
+    void 		 SetFont(font_t *font) { _font = font; }
     void		 SetScreenSize(float width, float height);
 
 private:
-    const font_t		*_font;
-    float				 _screenWidth;
-    float			 	 _screenHeight;
+    font_t		*_font;
+    float		 _screenWidth;
+    float		 _screenHeight;
 #endif
 };
 

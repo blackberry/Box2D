@@ -25,6 +25,7 @@
 #include <bps/screen.h>
 #include <bps/bps.h>
 #include <bps/event.h>
+#include <bps/virtualkeyboard.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -42,6 +43,8 @@
 
 #include "bbutil.h"
 
+#define KEYBOARD_HITSIZE 20
+
 namespace
 {
 	int32 testIndex = 0;
@@ -52,6 +55,7 @@ namespace
 	Settings settings;
 	int32 width = 640;
 	int32 height = 480;
+	int32 screen_height;
 	int32 framePeriod = 16;  // = 1/60 * 1000
 	int32 mainWindow;
 	float settingsHz = 60.0;
@@ -64,8 +68,9 @@ namespace
 	struct gestures_set * set;
 	b2Vec2 centerPrev;
 	b2Vec2 centerNext;
-	const font_t* font;
+	font_t* font;
     screen_context_t screen_cxt;
+    bool keyboard_visible = false;
 }
 
 // convert the timespec into milliseconds
@@ -315,14 +320,11 @@ static void gestureCallback(gesture_base_t* gesture, mtouch_event_t* event, void
  */
 static void initGestures()
 {
-    gesture_tap_t* 		  tap;
-    gesture_double_tap_t* double_tap;
-
 	set = gestures_set_alloc();
-	if (NULL != set)
+	if (set)
 	{
-		tap 	   = tap_gesture_alloc(NULL, gestureCallback, set);
-		double_tap = double_tap_gesture_alloc(NULL, gestureCallback, set);
+		tap_gesture_alloc(NULL, gestureCallback, set);
+		double_tap_gesture_alloc(NULL, gestureCallback, set);
 		tfpan_gesture_alloc(NULL, gestureCallback, set);
 		pinch_gesture_alloc(NULL, gestureCallback, set);
 	}
@@ -366,7 +368,12 @@ void handleScreenEvent(bps_event_t *event)
             if (!rc)
             {
             	if (screen_val == SCREEN_EVENT_MTOUCH_TOUCH)
+            	{
             		MouseDown(mtouch_event.x, mtouch_event.y);
+
+                    if (!keyboard_visible && mtouch_event.x < KEYBOARD_HITSIZE && mtouch_event.y > screen_height - KEYBOARD_HITSIZE)
+                    	virtualkeyboard_show();
+            	}
             	else if (screen_val == SCREEN_EVENT_MTOUCH_MOVE)
             		test->MouseMove(ConvertScreenToWorld(mtouch_event.x, mtouch_event.y));
             	else
@@ -404,7 +411,7 @@ int initialize()
 
 	int dpi = bbutil_calculate_dpi(screen_cxt);
 
-	font = bbutil_load_font("/usr/fonts/font_repository/monotype/tahoma.ttf", 6, dpi);
+	font = bbutil_load_font("/usr/fonts/font_repository/monotype/tahoma.ttf", 5, dpi);
 	if (!font)
 		return EXIT_FAILURE;
 
@@ -416,6 +423,7 @@ int initialize()
 
     width = surface_width;
     height = surface_height;
+    screen_height = surface_height;
 
     // calculate the position of the next/prev buttons in world coordinates
     centerPrev.x = width / 2 - 88;
@@ -455,6 +463,10 @@ void drawWidgets()
     glOrthof(0, width, height, 0, -1024.0f, 1024.0f);
 
 	glMatrixMode(GL_MODELVIEW);
+
+	b2Vec2 axis(1.0f, 0.0f);
+	b2Vec2 point(10.0f, 10.0f);
+	const b2Color color2(0.0f, 0.0f, 1.0f);
 
 	localDraw.DrawCircle(centerPrev, radius, color);
 	localDraw.DrawCircle(centerNext, radius, color);
@@ -500,6 +512,14 @@ void render()
 		viewZoom = 1.0f;
 		settings.viewCenter.Set(0.0f, 20.0f);
 		Resize(width, height);
+
+		if (keyboard_visible)
+		{
+			int pixels;
+
+		    virtualkeyboard_get_height(&pixels);
+		    MouseScrollBy(0, -pixels);
+		}
 	}
 }
 
@@ -507,6 +527,7 @@ int main(int argc, char *argv[])
 {
     int exit_application = 0;
     int rc;
+    int pixels;
 
     //Create a screen context that will be used to create an EGL surface to to receive libscreen events
     screen_create_context(&screen_cxt, 0);
@@ -516,8 +537,10 @@ int main(int argc, char *argv[])
     //Initialize BPS library
 	bps_initialize();
 
+	virtualkeyboard_request_events(0);
+
 	//Use utility code to initialize EGL for 2D rendering with GL ES 1.1
-	if (EXIT_SUCCESS != bbutil_init_egl(screen_cxt, GL_ES_1, AUTO))
+	if (EXIT_SUCCESS != bbutil_init_egl(screen_cxt))//, GL_ES_1, AUTO))
 	{
 		fprintf(stderr, "bbutil_init_egl failed\n");
 		bbutil_terminate();
@@ -599,7 +622,23 @@ int main(int argc, char *argv[])
         {
             int domain = bps_event_get_domain(event);
 
-            if (domain == screen_get_domain())
+            if (domain == virtualkeyboard_get_domain())
+			{
+				switch (bps_event_get_code(event))
+				{
+					case VIRTUALKEYBOARD_EVENT_VISIBLE:
+						keyboard_visible = true;
+						virtualkeyboard_get_height(&pixels);
+						MouseScrollBy(0, -pixels);
+						break;
+					case VIRTUALKEYBOARD_EVENT_HIDDEN:
+						keyboard_visible = false;
+						virtualkeyboard_get_height(&pixels);
+						MouseScrollBy(0, pixels);
+						break;
+				}
+			}
+            else if (domain == screen_get_domain())
             {
                 handleScreenEvent(event);
             }
