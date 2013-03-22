@@ -7,11 +7,11 @@
     <Filter Include="Tests">
       <UniqueIdentifier>{CF6BC554-9DC6-4547-9F18-A1BA2F3345BF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="blackberry">
+      <UniqueIdentifier>{fc84c6a4-ebaf-4e0f-bd7a-735a57130c96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Testbed\Framework\Render.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Testbed\Framework\Test.h">
       <Filter>Framework</Filter>
     </ClInclude>
@@ -153,19 +153,28 @@
     <ClInclude Include="..\..\Testbed\Tests\Tumbler.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Testbed\Framework\GLES-Render.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Testbed\blackberry\bbutil.h">
+      <Filter>blackberry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Testbed\Framework\Main.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Testbed\Framework\Render.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Testbed\Framework\Test.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Testbed\Tests\TestEntries.cpp">
       <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Testbed\Framework\GLES-Render.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Testbed\blackberry\bbutil.cpp">
+      <Filter>blackberry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Testbed\blackberry\main.cpp">
+      <Filter>blackberry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
