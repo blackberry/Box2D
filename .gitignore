@@ -1,8 +1,7 @@
-
-/Device-Debug
-/Simulator-Coverage
-/Simulator-Profile
-/Device-Coverage
-/Device-Profile
-/Device-Release
-/Simulator
+Device-Coverage/
+Device-Debug/
+Device-Profile/
+Device-Release/
+Simulator-Coverage/
+Simulator-Debug/
+Simulator-Profile/
